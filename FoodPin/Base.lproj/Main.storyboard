@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0qI-al-5sV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,6 +66,12 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="jpu-RH-cWd" secondAttribute="trailing" id="vdh-rT-DdY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationLabel" destination="dkt-xW-3ar" id="Rv4-hH-3hs"/>
+                                    <outlet property="nameLabel" destination="Kh6-ZD-Lyr" id="k8p-vp-ZOb"/>
+                                    <outlet property="thumbnailImageView" destination="Wge-ow-zop" id="Tpc-d2-hr4"/>
+                                    <outlet property="typeLabel" destination="22c-D3-gnw" id="yVL-Bu-CJi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

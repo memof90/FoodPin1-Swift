@@ -52,10 +52,12 @@ class RestaurantTableViewController: UITableViewController {
         let dataSource = UITableViewDiffableDataSource<Section, String>(
         
             tableView: tableView,  cellProvider: {  tableView, indexPath, restaurantName in
-                let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+//                MARK: downcasting
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
                     
-                cell.textLabel?.text = restaurantName
-                cell.imageView?.image = UIImage(named: self.restaurantImages[indexPath.row])
+                cell.nameLabel.text = restaurantName
+                cell.thumbnailImageView.image = UIImage(named: self.restaurantImages[indexPath.row])
                 
                 return cell
                 
