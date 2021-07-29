@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D176C8726B315C500228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.38.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D176C8626B315C500228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.38.png */; };
+		8D176C8926B315D300228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.57.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D176C8826B315D300228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.57.png */; };
+		8D176C8B26B315E500228F25 /* Simulator Screen Recording - iPhone 12 Pro - 2021-07-29 at 11.56.54.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8D176C8A26B315E500228F25 /* Simulator Screen Recording - iPhone 12 Pro - 2021-07-29 at 11.56.54.gif */; };
 		8D62E5DA26B1FDA400FAB228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62E5D926B1FDA400FAB228 /* AppDelegate.swift */; };
 		8D62E5DC26B1FDA400FAB228 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D62E5DB26B1FDA400FAB228 /* SceneDelegate.swift */; };
 		8D62E5E126B1FDA400FAB228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D62E5DF26B1FDA400FAB228 /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D176C8626B315C500228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.38.png"; sourceTree = "<group>"; };
+		8D176C8826B315D300228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.57.png"; sourceTree = "<group>"; };
+		8D176C8A26B315E500228F25 /* Simulator Screen Recording - iPhone 12 Pro - 2021-07-29 at 11.56.54.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Simulator Screen Recording - iPhone 12 Pro - 2021-07-29 at 11.56.54.gif"; sourceTree = "<group>"; };
 		8D62E5D626B1FDA400FAB228 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D62E5D926B1FDA400FAB228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D62E5DB26B1FDA400FAB228 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D176C8526B315A400228F25 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8D176C8A26B315E500228F25 /* Simulator Screen Recording - iPhone 12 Pro - 2021-07-29 at 11.56.54.gif */,
+				8D176C8826B315D300228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.57.png */,
+				8D176C8626B315C500228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.38.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		8D62E5CD26B1FDA400FAB228 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +74,7 @@
 		8D62E5D826B1FDA400FAB228 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				8D176C8526B315A400228F25 /* images */,
 				8D62E5D926B1FDA400FAB228 /* AppDelegate.swift */,
 				8D62E5DB26B1FDA400FAB228 /* SceneDelegate.swift */,
 				8D62E5DF26B1FDA400FAB228 /* Main.storyboard */,
@@ -127,7 +144,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D176C8726B315C500228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.38.png in Resources */,
+				8D176C8B26B315E500228F25 /* Simulator Screen Recording - iPhone 12 Pro - 2021-07-29 at 11.56.54.gif in Resources */,
 				8D62E5E626B1FDA700FAB228 /* LaunchScreen.storyboard in Resources */,
+				8D176C8926B315D300228F25 /* Simulator Screen Shot - iPhone 12 Pro - 2021-07-29 at 11.54.57.png in Resources */,
 				8D62E5E326B1FDA700FAB228 /* Assets.xcassets in Resources */,
 				8D62E5E126B1FDA400FAB228 /* Main.storyboard in Resources */,
 			);
