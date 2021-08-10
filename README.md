@@ -12,7 +12,7 @@ dataSource = UITableViewDiffableDataSource<Int, UUID>(tableView: tableView) {
 
 ## Video example Light Mode
 
-![](https://github.com/memof90/FoodPin1-Swift/blob/master/FoodPin/images/Simulator%20Screen%20Shot%20-%20iPhone%2012%20Pro%20-%202021-07-29%20at%2011.54.38.png?raw=true)
+![](https://github.com/memof90/FoodPin1-Swift/blob/master/FoodPin/images/Simulator%20Screen%20Recording%20-%20iPhone%2012%20Pro%20-%202021-07-29%20at%2011.56.54.gif?raw=true)
 
 ## Image example Light Mode
 
