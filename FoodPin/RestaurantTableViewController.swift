@@ -75,7 +75,9 @@ class RestaurantTableViewController: UITableViewController {
                 cell.typeLabel.text = self.restaurantTypes[indexPath.row]
                 cell.thumbnailImageView.image = UIImage(named: self.restaurantImages[indexPath.row])
 //               Every time when the cell is rendered, we check if the restaurant to be displayed is marked as favorite. If the condition is true , we display a checkmark in the cell. Otherwise, just display nothing.
-                cell.accessoryType = self.restaurantsIsFavorites[indexPath.row] ? .checkmark: .none
+//                cell.accessoryType = self.restaurantsIsFavorites[indexPath.row] ? .checkmark: .none
+                
+                cell.heartImageView.isHidden = self.restaurantsIsFavorites[indexPath.row] ? false : true
                 
                 return cell
                 
@@ -111,24 +113,36 @@ class RestaurantTableViewController: UITableViewController {
         optionMenu.addAction(reservationAction)
         
 //        Mark as favorite action
-        let favoriteAction = UIAlertAction(title: "Mark as favorite", style: .default, handler: {(action: UIAlertAction!) -> Void in
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
-            cell?.tintColor = .systemYellow
-//           Check to true
-            self.restaurantsIsFavorites[indexPath.row] = true
-        })
-        optionMenu.addAction(favoriteAction)
+//        let favoriteAction = UIAlertAction(title: "Mark as favorite", style: .default, handler: {(action: UIAlertAction!) -> Void in
+//            let cell = tableView.cellForRow(at: indexPath)
+//            cell?.accessoryType = .checkmark
+//            cell?.tintColor = .systemYellow
+////           Check to true
+//            self.restaurantsIsFavorites[indexPath.row] = true
+//        })
+//        optionMenu.addAction(favoriteAction)
         
 //        REMOVE FAVORITE
-        let removeFavorite = UIAlertAction(title: "remove from favorites", style: .destructive, handler: {(action: UIAlertAction!) -> Void in
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .none
-            
-            self.restaurantsIsFavorites[indexPath.row] = false
-        })
+//        let removeFavorite = UIAlertAction(title: "remove from favorites", style: .destructive, handler: {(action: UIAlertAction!) -> Void in
+//            let cell = tableView.cellForRow(at: indexPath)
+//            cell?.accessoryType = .none
+//
+//            self.restaurantsIsFavorites[indexPath.row] = false
+//        })
+//
+//        optionMenu.addAction(removeFavorite)
         
-        optionMenu.addAction(removeFavorite)
+//        MARK: Action as favorite action
+        let favoriteActionTitle = self.restaurantsIsFavorites[indexPath.row] ? "Remove from favorites" : "Mark as favorite"
+        let styleFavorite = self.restaurantsIsFavorites[indexPath.row] ? 2 : 0
+        
+        let favoriteAction = UIAlertAction(title: favoriteActionTitle, style: UIAlertAction.Style(rawValue: styleFavorite) ?? .default, handler: {(action: UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+//            MARK: SOLUTION EXERCISE #2
+            cell.heartImageView.isHidden = self.restaurantsIsFavorites[indexPath.row]
+            self.restaurantsIsFavorites[indexPath.row] = self.restaurantsIsFavorites[indexPath.row] ? false : true
+        })
+        optionMenu.addAction(favoriteAction)
         
         
 //        Display the menu

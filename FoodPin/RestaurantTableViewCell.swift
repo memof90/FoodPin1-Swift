@@ -19,7 +19,7 @@ class RestaurantTableViewCell: UITableViewCell {
             thumbnailImageView.clipsToBounds = true
         }
     }
-    
+    @IBOutlet var heartImageView: UIImageView!
     
 //MARK: CHANGE COLOR CEHCK
     override func awakeFromNib() {
