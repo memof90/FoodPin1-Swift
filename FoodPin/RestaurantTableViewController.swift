@@ -33,6 +33,10 @@ class RestaurantTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        ajustar el ancho de la celda
+        tableView.cellLayoutMarginsFollowReadableWidth = true
+//        hide separator table 
         tableView.separatorStyle = .none
 // four: asignar fuente de datos personalizadas
         tableView.dataSource = dataSource
@@ -81,8 +85,17 @@ class RestaurantTableViewController: UITableViewController {
         }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
 //        Create an option menu as an action sheet
         let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+        
+        //        BUG IPAD NOT SUPPORT ALLERT ACTIONSHEET IS NECESARY POPOVER
+        if let popoverController = optionMenu.popoverPresentationController {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                popoverController.sourceView = cell
+                popoverController.sourceRect = cell.bounds
+            }
+        }
         
 //        Add actions to the menu
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
