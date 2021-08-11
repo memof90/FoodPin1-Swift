@@ -112,11 +112,13 @@ class RestaurantTableViewController: UITableViewController {
         let reservationAction = UIAlertAction(title: "Reserve a table", style: .default, handler: reserveActionHandler)
         optionMenu.addAction(reservationAction)
         
+//        MARK: EXCERCISES #ONE AND TWO MY SOLUTION
 //        Mark as favorite action
 //        let favoriteAction = UIAlertAction(title: "Mark as favorite", style: .default, handler: {(action: UIAlertAction!) -> Void in
-//            let cell = tableView.cellForRow(at: indexPath)
-//            cell?.accessoryType = .checkmark
-//            cell?.tintColor = .systemYellow
+//            let cell = tableView.cellForRow(at: indexPath) as!  RestaurantTableViewCell
+//            cell.heartImageView.isHidden = self.restaurantsIsFavorites[indexPath.row]
+////            cell?.accessoryType = .checkmark
+////            cell?.tintColor = .systemYellow
 ////           Check to true
 //            self.restaurantsIsFavorites[indexPath.row] = true
 //        })
@@ -124,9 +126,9 @@ class RestaurantTableViewController: UITableViewController {
         
 //        REMOVE FAVORITE
 //        let removeFavorite = UIAlertAction(title: "remove from favorites", style: .destructive, handler: {(action: UIAlertAction!) -> Void in
-//            let cell = tableView.cellForRow(at: indexPath)
-//            cell?.accessoryType = .none
-//
+//            let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+////            cell?.accessoryType = .none
+//            cell.heartImageView.isHidden = self.restaurantsIsFavorites[indexPath.row]
 //            self.restaurantsIsFavorites[indexPath.row] = false
 //        })
 //
@@ -135,7 +137,7 @@ class RestaurantTableViewController: UITableViewController {
 //        MARK: Action as favorite action
         let favoriteActionTitle = self.restaurantsIsFavorites[indexPath.row] ? "Remove from favorites" : "Mark as favorite"
         let styleFavorite = self.restaurantsIsFavorites[indexPath.row] ? 2 : 0
-        
+
         let favoriteAction = UIAlertAction(title: favoriteActionTitle, style: UIAlertAction.Style(rawValue: styleFavorite) ?? .default, handler: {(action: UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
 //            MARK: SOLUTION EXERCISE #2
