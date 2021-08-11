@@ -118,8 +118,18 @@ class RestaurantTableViewController: UITableViewController {
 //           Check to true
             self.restaurantsIsFavorites[indexPath.row] = true
         })
-        
         optionMenu.addAction(favoriteAction)
+        
+//        REMOVE FAVORITE
+        let removeFavorite = UIAlertAction(title: "remove from favorites", style: .destructive, handler: {(action: UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .none
+            
+            self.restaurantsIsFavorites[indexPath.row] = false
+        })
+        
+        optionMenu.addAction(removeFavorite)
+        
         
 //        Display the menu
         present(optionMenu, animated: true, completion: nil)
