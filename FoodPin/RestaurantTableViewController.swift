@@ -24,6 +24,10 @@ class RestaurantTableViewController: UITableViewController {
     "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London"]
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian/ Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee &Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
+    
+//    BUG create 10 cells and reuses
+    var restaurantsIsFavorites = Array(repeating: false, count: 21)
+    
 //   tree: usamos lazy porque su valor inicial no se puede recuperar hasta que finalice la iniacializacion de la instancia
    lazy var dataSource = configureDataSource()
 
@@ -66,6 +70,8 @@ class RestaurantTableViewController: UITableViewController {
                 cell.locationLabel.text = self.restaurantLocations[indexPath.row]
                 cell.typeLabel.text = self.restaurantTypes[indexPath.row]
                 cell.thumbnailImageView.image = UIImage(named: self.restaurantImages[indexPath.row])
+//               Every time when the cell is rendered, we check if the restaurant to be displayed is marked as favorite. If the condition is true , we display a checkmark in the cell. Otherwise, just display nothing.
+                cell.accessoryType = self.restaurantsIsFavorites[indexPath.row] ? .checkmark: .none
                 
                 return cell
                 
@@ -95,12 +101,18 @@ class RestaurantTableViewController: UITableViewController {
         let favoriteAction = UIAlertAction(title: "Mark as favorite", style: .default, handler: {(action: UIAlertAction!) -> Void in
             let cell = tableView.cellForRow(at: indexPath)
             cell?.accessoryType = .checkmark
+            cell?.tintColor = .systemYellow
+//           Check to true
+            self.restaurantsIsFavorites[indexPath.row] = true
         })
         
         optionMenu.addAction(favoriteAction)
         
 //        Display the menu
         present(optionMenu, animated: true, completion: nil)
+        
+//        methond to deselect the row
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }
