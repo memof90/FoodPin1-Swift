@@ -52,6 +52,8 @@ class RestaurantTableViewController: UITableViewController {
 //   tree: usamos lazy porque su valor inicial no se puede recuperar hasta que finalice la iniacializacion de la instancia
    lazy var dataSource = configureDataSource()
 
+//     MARK: -View Controller life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,7 +74,8 @@ class RestaurantTableViewController: UITableViewController {
     
     }
     
-//    MARK: UITableViewDiffableDataSource
+//    MARK: - UITableViewDiffableDataSource
+    
 //    Frist declare number to section
     enum Section {
         case all
@@ -106,6 +109,8 @@ class RestaurantTableViewController: UITableViewController {
             )
             return dataSource
         }
+    
+   // MARK: - UITableViewDelegate Protocol
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 

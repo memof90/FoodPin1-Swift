@@ -79,15 +79,14 @@
 		8D62E5D826B1FDA400FAB228 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				8D9441A026E18AD400BB4121 /* StoryBoard */,
 				8D94419C26E1801E00BB4121 /* Model */,
 				8D94419D26E1803200BB4121 /* View */,
 				8D94419F26E1805400BB4121 /* Controller */,
 				8D176C8526B315A400228F25 /* images */,
 				8D62E5D926B1FDA400FAB228 /* AppDelegate.swift */,
 				8D62E5DB26B1FDA400FAB228 /* SceneDelegate.swift */,
-				8D62E5DF26B1FDA400FAB228 /* Main.storyboard */,
 				8D62E5E226B1FDA700FAB228 /* Assets.xcassets */,
-				8D62E5E426B1FDA700FAB228 /* LaunchScreen.storyboard */,
 				8D62E5E726B1FDA700FAB228 /* Info.plist */,
 			);
 			path = FoodPin;
@@ -115,6 +114,15 @@
 				8D62E5ED26B1FF8500FAB228 /* RestaurantTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8D9441A026E18AD400BB4121 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				8D62E5E426B1FDA700FAB228 /* LaunchScreen.storyboard */,
+				8D62E5DF26B1FDA400FAB228 /* Main.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
